@@ -2,7 +2,7 @@
 (function () {
   var slot = document.getElementById("email-slot");
   if (!slot) return;
-  var user = ["BigA", "contact"].join("-");
+  var user = ["BigA", "hello"].join(".");
   var host = ["outlook", "com"].join(".");
   var addr = user + "@" + host;
   var a = document.createElement("a");
