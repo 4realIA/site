@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; font-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; base-uri 'none'; form-action 'none'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Andy Anton</title>
   <meta name="description" content="Security leader (CISSP, CISM, CCISO) who builds small, private-by-design desktop apps in his own time.">
@@ -123,10 +123,11 @@
     <section id="contact" class="section">
       <div class="wrap contact">
         <h2>Get in touch</h2>
-        <p>The best way to reach me is on LinkedIn.</p>
+        <p>Message me on LinkedIn or send an email.</p>
         <p class="contact-links">
           <a class="button" href="https://www.linkedin.com/in/andy-anton-cissp-cism-002bb279" rel="noopener">LinkedIn</a>
           <a class="button button-quiet" href="https://github.com/4realIA" rel="noopener">GitHub</a>
+          <span id="email-slot" hidden></span>
         </p>
       </div>
     </section>
@@ -138,5 +139,6 @@
       <p>No cookies, no analytics, no tracking.</p>
     </div>
   </footer>
+  <script src="contact.js" defer></script>
 </body>
 </html>
