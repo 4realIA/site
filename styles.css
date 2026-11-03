@@ -163,7 +163,7 @@ p { margin: 0 0 16px; }
 }
 .badge-dev { color: var(--accent); border-color: currentColor; }
 .card p { color: var(--muted); }
-.card .links { margin-top: auto; margin-bottom: 0; padding-top: 4px; font-weight: 600; }
+.card .links { margin-top: auto; margin-bottom: 0; padding-top: 4px; font-weight: 600; display: flex; flex-wrap: wrap; gap: 6px 20px; }
 .card .links a::after { content: " →"; }
 .card .fine { font-size: 13px; margin: 12px 0 0; }
 
