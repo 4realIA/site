@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Running AI Locally · Andy Anton</title>
+  <meta name="description" content="How Andy Anton runs open AI models on his own Mac for chat, research, video and editing, and how he checks the data stays there.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f6f7f9" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0b1220" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="brand" href="./" aria-label="Andy Anton, home">
+        <svg class="drop" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5c-.4 0-.7.2-.9.5C9.4 5.6 5 11.6 5 15a7 7 0 0 0 14 0c0-3.4-4.4-9.4-6.1-12-.2-.3-.5-.5-.9-.5Z"/></svg>
+        <span>Andy Anton</span>
+      </a>
+      <nav aria-label="Sections">
+        <a href="./#about">About</a>
+        <a href="./#apps">Apps</a>
+        <a href="./#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <div class="wrap prose">
+      <p class="eyebrow-muted">Last updated November 9, 2026</p>
+      <h1>How I run AI locally</h1>
+      <p>When I review a firm's AI use, the first question is where the data goes. I hold my own projects to the same standard. Everything below runs on one Mac, using open models I've downloaded. Nothing needs an account, a subscription or an API key, and nothing I type is sent to an AI company.</p>
+      <p>The commands, configuration and a connection-check script are in a public repo: <a href="https://github.com/4realIA/local-ai" rel="noopener">github.com/4realIA/local-ai</a>.</p>
+
+      <h2>The ground rules</h2>
+      <ul>
+        <li><strong>Models run on the machine.</strong> The model files live on my disk and run on Apple Silicon through MLX. Once a model is downloaded, it works with Wi-Fi off.</li>
+        <li><strong>The network is opt-in, per request.</strong> A model can't reach the internet by itself. It can only call tools I've installed, and I approve each call before it runs.</li>
+        <li><strong>I check rather than trust.</strong> "Local" is a claim, so I look at what actually connects out (see the last section).</li>
+        <li><strong>A person decides.</strong> Models draft, suggest and generate. I review everything before it's used or shared.</li>
+      </ul>
+
+      <h2>Chat and research</h2>
+      <p>For everyday questions, outlines and code help, I use LM Studio with an open-weight Qwen model in MLX format. It's a desktop app with a normal chat window and a local server my own tools can call.</p>
+      <p>When a question needs current information, the model can use two small open-source MCP tools: one searches DuckDuckGo (no account or key), and one fetches a web page. LM Studio asks me to approve every call, so I can see exactly what's being searched and which pages are read. That approval prompt is also my test: if an answer about current events arrives without a tool call, it came from the model's memory and I treat it as unverified.</p>
+
+      <h2>Video projects</h2>
+      <p>My daughter and I make short animated stories about our pets, entirely on-device. A family photo becomes a cartoon character with an image-editing model, the character is placed into real photos from around the house, each line of dialogue gets a synthetic voice, and a video model animates the scene so the mouth moves with the words. The tools are Draw Things, Qwen Image Edit (through mflux), Kokoro for voices and LTX-Video (through mlx-video), tied together by a small script and an app I'm building.</p>
+      <p>None of the family photos leave the machine, and there's no per-video cost. The trade-off is time: a short story takes a few hours to render.</p>
+
+      <h2>An editing pass on my own drafts</h2>
+      <p>I keep a local model loaded with editing instructions: cut filler and hedging, replace inflated words with plain ones, break up formulaic patterns, shorten long sentences. I paste in a draft, it marks up suggestions, and I decide what to keep. It's a second reader, not an author.</p>
+      <p>Drafts often include details that shouldn't go to a cloud service, so this step stays on the machine.</p>
+
+      <h2>Checking that it stays local</h2>
+      <ul>
+        <li><strong>Watch the tool calls.</strong> Every web search or page fetch needs my approval, and it's logged in the chat.</li>
+        <li><strong>Look at live connections.</strong> A short script in the repo lists the open network connections of the model app and its helpers. While a model is answering with no tools in use, the list should be empty.</li>
+        <li><strong>Pull the plug.</strong> After models are downloaded, I switch Wi-Fi off and run the same tasks. If something only works online, I want to know which part and why.</li>
+        <li><strong>Know the exceptions.</strong> Downloading models and app updates goes to Hugging Face and the app makers. Searches go to DuckDuckGo. Those are the expected connections, and anything else is worth a look.</li>
+      </ul>
+
+      <h2>Questions</h2>
+      <p>Happy to compare notes. Reach me through the <a href="./#contact">home page</a>.</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <p>© 2026 Andy Anton</p>
+      <p>No cookies, no analytics, no tracking. <a href="privacy.html">Privacy</a></p>
+    </div>
+  </footer>
+</body>
+</html>
