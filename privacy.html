@@ -32,7 +32,7 @@
 
   <main id="main" class="section">
     <div class="wrap prose">
-      <p class="eyebrow-muted">Last updated November 13, 2026</p>
+      <p class="eyebrow-muted">Last updated November 21, 2026</p>
       <h1>Privacy</h1>
       <p>Short version: this site and my apps don't collect anything about you. The apps keep your data on your own device. Below is exactly what goes over the network, and to whom.</p>
 
@@ -52,6 +52,16 @@
 
       <h3>Bible Overview</h3>
       <p>Nothing else on its own. The Bible text, overviews and sermon lists are built in, so it works offline. If you choose a sermon or <strong>Commentary online</strong>, it opens that page in your web browser (Subsplash, SermonAudio, Bible Hub, Blue Letter Bible or Enduring Word), and that site handles your visit. Your notes and bookmarks stay on your computer.</p>
+      <p><strong>Online translations</strong> (version 1.11 and later, downloaded from this site) stay off unless you add your own free access key under <strong>Settings → Online translations</strong>:</p>
+      <ul>
+        <li>With a key from Crossway, the app gets each ESV chapter you open from Crossway's ESV service (api.esv.org).</li>
+        <li>With a key from API.Bible, it gets each NASB 1995, CSB or NLT chapter you open from api.bible. API.Bible's license also requires the app to report which chapters were shown to API.Bible's fair-use reporting service (fums.api.bible). Each report carries a random number the app makes for your computer and a new random number each time the app opens. Neither identifies you, and nothing else, such as your notes or names, is sent.</li>
+        <li>When you save a key, the app sends one or three small requests to check that it works.</li>
+        <li>Crossway and API.Bible see your IP address and your key, and handle them under their own privacy policies.</li>
+        <li>Your keys are kept in your computer's secure storage (the Mac Keychain or Windows Credential Manager), never anywhere else. Removing a key in Settings deletes it and the chapters kept with it.</li>
+        <li>ESV chapters are kept only while the app is open. API.Bible chapters are kept on your computer for up to 14 days, so they open faster the second time.</li>
+      </ul>
+      <p>Copies from the Microsoft Store or App Store don't offer online translations.</p>
       <p><strong>Practice</strong> (memory verses and books of the Bible) asks for a name for each person practicing, such as a child's first name. The names and everyone's progress are saved only on your computer and are never sent anywhere. Remove a name in Practice to delete that person's progress. Mom’s Bible, the simpler edition, has no Practice.</p>
 
       <h3>Cairn Exam Prep</h3>
