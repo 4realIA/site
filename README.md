@@ -1,10 +1,10 @@
-# 4ia.info
+# dmd4life.tech
 
 Andy Anton's personal site. Plain HTML and CSS, no build step, served by GitHub Pages.
 
 - `index.html` – the page
 - `styles.css` – all styling (light and dark follow the system setting)
-- `CNAME` – the custom domain; change this one line to move to a new domain
+- `CNAME` – the custom domain (dmd4life.tech since November 2026; the old 4ia.info redirects here until it expires); change this one line to move to a new domain
 - `privacy.html` – what the site and each app collect and connect to; update it (and its date) when an app starts talking to something new
 - `og.png` – the preview image LinkedIn and others show for links
 

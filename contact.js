@@ -7,7 +7,7 @@
   var addr = user + "@" + host;
   var a = document.createElement("a");
   a.className = "button button-quiet";
-  a.href = "mailto:" + addr + "?subject=" + encodeURIComponent("Hello from 4ia.info");
+  a.href = "mailto:" + addr + "?subject=" + encodeURIComponent("Hello from dmd4life.tech");
   a.textContent = "Email";
   a.title = addr;
   slot.replaceWith(a);
