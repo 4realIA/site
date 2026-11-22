@@ -1,4 +1,4 @@
-/* Andy Anton — 4ia.info
+/* Andy Anton — dmd4life.tech
    Navy and slate with one citrus accent. Light and dark follow the system. */
 
 :root {
@@ -167,6 +167,9 @@ p { margin: 0 0 16px; }
 .card .links a::after { content: " →"; }
 .card .fine { font-size: 13px; margin: 12px 0 0; }
 
+/* Hero calls to action */
+.hero-cta { display: flex; flex-wrap: wrap; gap: 12px; margin: 28px 0 0; }
+
 /* Contact */
 .contact p { color: var(--muted); }
 .contact-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
@@ -178,6 +181,8 @@ p { margin: 0 0 16px; }
 .button:hover { filter: brightness(1.05); }
 .button-quiet { background: transparent; color: var(--text); border: 1px solid var(--line); }
 .button-quiet:hover { border-color: var(--muted); }
+.button-hero-quiet { background: transparent; color: var(--hero-text); border: 1px solid var(--hero-muted); }
+.button-hero-quiet:hover { border-color: var(--hero-text); }
 
 /* Footer */
 .site-footer { border-top: 1px solid var(--line); padding: 28px 0; font-size: 14px; color: var(--muted); }
@@ -185,8 +190,9 @@ p { margin: 0 0 16px; }
 .footer-row p { margin: 0; }
 
 @media (max-width: 420px) {
-  nav a { padding: 6px 7px; font-size: 14px; }
-  .brand span { font-size: 15px; }
+  nav a { padding: 6px 5px; font-size: 14px; }
+  .brand span { font-size: 15px; white-space: nowrap; }
+  .header-row { gap: 8px; }
 }
 
 /* 404 page */
@@ -204,4 +210,12 @@ p { margin: 0 0 16px; }
 .eyebrow-muted {
   margin: 0 0 12px; font-family: var(--mono); font-size: 13px;
   letter-spacing: .08em; text-transform: uppercase; color: var(--accent);
+}
+
+@media (max-width: 380px) {
+  nav a { padding: 6px 4px; font-size: 13px; }
+  .brand span { font-size: 14px; }
+}
+@media (max-width: 340px) {
+  .brand span { display: none; }
 }

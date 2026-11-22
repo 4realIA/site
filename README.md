@@ -1,4 +1,4 @@
-# 4ia.info
+# dmd4life.tech
 
 Andy Anton's personal site. Plain HTML and CSS, no build step, served by GitHub Pages.
 
